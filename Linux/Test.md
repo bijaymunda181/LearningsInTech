@@ -10,3 +10,4 @@ chmod g+s <directory name >
 sticky bit
 It protects the data from other users when all users having full permissions on one directory.And "x" is replaced by "t".
 chmod o+t <directory name>
+
