@@ -1,1 +1,1 @@
-thisis the test file
+This is the test file.
