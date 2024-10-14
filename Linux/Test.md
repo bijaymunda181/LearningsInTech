@@ -11,3 +11,19 @@ sticky bit
 It protects the data from other users when all users having full permissions on one directory.And "x" is replaced by "t".
 chmod o+t <directory name>
 
+Partition:-
+Devide a single hard drive into many logical drive devides is partition.
+
+Q.How to create partition 
+fdisk /dev/sdb
+
+n:- select n for new partition
+
+t:- To change the partition type.
+83- for linux file system
+82-for swap
+8e-for lvm
+
+d:- For delete a partition.
+
+Note:-fdisk can create 4 partition 3 primary and 1 is extended partition.And gdisk can create 128 partition .
