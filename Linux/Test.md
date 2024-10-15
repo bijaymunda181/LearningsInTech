@@ -1,4 +1,3 @@
-This is the test file. 
 set uid
 If we want to all user to execute the root user command then we set uid (suid).It can be applied for user level and is applicable for file only.And "rwx" the "x" is replaced by "s".
 chmod u+s <filename>
