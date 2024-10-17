@@ -10,3 +10,14 @@ sticky bit
 It protects the data from other users when all users having full permissions on one directory.And "x" is replaced by "t".
 chmod o+t <directory name>
 
+user // In linux user is one who uses the system
+
+useradd <user name> // to add user 
+-M :-Without creating home directory
+-u:- To add userid on creation time.
+i.e; useradd -u 1005 -d /home/raju1 raju
+-d:-To spicify particular home directory of user manually on creation time.
+-U:-Create a group with same name.
+useradd -o -u o -g root <username> //To create duplicate root user.
+
+
