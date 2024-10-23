@@ -30,4 +30,30 @@ i.e; passwd -l <username> //
 -u:-To unlock the user's passwd.
 -s:-To check the status.
 
+usermod <option> <usename> //To modify user account.
+-c:-modyfy comment
+-L:-To Lock the user
+-G:- To add secondary group.
 
+e.g:- usermod -G <group name> <user name>
+-g:-To add primery group.
+-U:-To unlock/undo lock user.
+-u:-To change uid.
+e.g; usermod -u <uid> <user name>
+
+usermod -l <new name> <old name> //To change usename.
+
+-s:-change login shell for user.
+e.g; usermod -s </sbin/nologin or /bin/bash> <user name>
+
+usermod -G <user name> //To remove all secondary group.
+e.g; usermod -G group1,group3 <username>
+
+-aG:- To add group whthout overwrite.
+
+usermod -o -u 0 bijay //duplicate root user create by changing uid to 0.
+
+gpasswd -d <username> <group name> //To remove user from group.
+
+-l:-To change username.
+e.g; usermod -l <new name> <old name>
