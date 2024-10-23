@@ -20,4 +20,10 @@ i.e; useradd -u 1005 -d /home/raju1 raju
 -U:-Create a group with same name.
 useradd -o -u o -g root <username> //To create duplicate root user.
 
+userdel <username> // To delete the user.
+-f:-forcefully
+-r:-remove home directory and mail spool.
+
+
+
 
