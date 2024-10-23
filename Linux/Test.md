@@ -24,6 +24,10 @@ userdel <username> // To delete the user.
 -f:-forcefully
 -r:-remove home directory and mail spool.
 
-
+passwd <username> // To give passwd.
+-l:-to lock the passwd of user.
+i.e; passwd -l <username> //
+-u:-To unlock the user's passwd.
+-s:-To check the status.
 
 
