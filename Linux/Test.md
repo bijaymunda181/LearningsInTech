@@ -57,3 +57,27 @@ gpasswd -d <username> <group name> //To remove user from group.
 
 -l:-To change username.
 e.g; usermod -l <new name> <old name>
+
+#chage //change user password expiry information.
+-l:-show user passwd information.
+e.g; chage -l <user name>
+
+-E:-change account expiry date.
+e.g; chage -E 2024-07-30 <user  name>
+
+-M:- Change or modify password expiry date.
+e.g; chage -M 90 <username>
+
+-m:-Minimum days between password change.
+chage -m 2 <user name>
+#note:- If you change your passwd today,you will not change your password for two days.
+After 2 days you an change your password.
+
+-d:-It expiry everything.
+e.g; chage -d 0 <user name>
+
+-W:-To modify worning days.
+
+-I:-Set password inactive afer expireration to inactive.
+
+chage -E -1 <user name> //IT change account expiry date to never.
