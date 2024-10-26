@@ -81,3 +81,11 @@ e.g; chage -d 0 <user name>
 -I:-Set password inactive afer expireration to inactive.
 
 chage -E -1 <user name> //IT change account expiry date to never.
+
+#chsh // Change login shell.
+-s:- specifylogin shell.
+e.g; chsh -s /sbin/nologin <usernamr>
+
+-l:- Print the list of shells listed in /etc/shells.
+
+-v:- Display verson information.
