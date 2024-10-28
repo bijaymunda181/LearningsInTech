@@ -89,3 +89,26 @@ e.g; chsh -s /sbin/nologin <usernamr>
 -l:- Print the list of shells listed in /etc/shells.
 
 -v:- Display verson information.
+
+#nmcli // Command line tool for controling network manager.
+
+nmcli dev status // Show device network status.
+
+nmcli dev show // To show the device.
+
+nmcli con show // To show all connection.
+
+nmcli con add con-name "mycon" auto connet yes type ethernet ifname ens33 ipv4.method auto //To add new coonection.
+
+nmcli con up <con-name> //To up the connection.
+
+nmcli con down <con-name> // To down the connection.
+
+nmcli con del <con-name> //To delete the connectio.
+
+nmcli con mod <con-name> // To madify the connectio.
+
+nmcli con mod ens33 autoconnect yes // To update autoconnet as yes of ens33 connectio.
+
+#note:- /etc/sysconfig/network-scripts/      CentOs7  //Device configuration file.  
+        /etc/NetworkManager/system-connction/     Centos9 //Device configuration file.  
