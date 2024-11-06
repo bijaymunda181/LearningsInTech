@@ -112,3 +112,23 @@ nmcli con mod ens33 autoconnect yes // To update autoconnet as yes of ens33 conn
 
 #note:- /etc/sysconfig/network-scripts/      CentOs7  //Device configuration file.  
         /etc/NetworkManager/system-connction/     Centos9 //Device configuration file.  
+
+#crontab // Scheduled task and command on operating systems that runs automatically at specified intervals.Cronjob are commany used for automating repetitive task.
+
+FOR ROOT USER
+crontab -e // To edit the cronjob.
+*/2 * * * * touch file{1..2} //root user will create file after every 2 min.
+crontab -l // To list cron jobs.
+crontab -r // To remove cron jobs.
+
+FOR NORMAL USER
+cat /etc/crontab //To see cron job list.
+crontab -lu <username> //To list all cron job of specified user.
+crontab -eu <username> //To create and edit cron jobs.
+crontab -ru <username> //To erase or remove the specified users cron jobs.
+crontab -r <job id> //To remove the specified cron jobs.
+vim /etc/cron.deny // To deny the cron jobs for specified users.
+vim /etc/cron.allow // To allow the cron jobs for specified users.
+
+Note:- If boot file are remove or delete , except root user the users are deny to execute the cronjob.
+Note:- Whenever run any command first check normal user can execute the command or not if normal user can execute the command then cronjob seduled also apply.
