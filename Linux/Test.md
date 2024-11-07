@@ -132,3 +132,13 @@ vim /etc/cron.allow // To allow the cron jobs for specified users.
 
 Note:- If boot file are remove or delete , except root user the users are deny to execute the cronjob.
 Note:- Whenever run any command first check normal user can execute the command or not if normal user can execute the command then cronjob seduled also apply.
+
+#firewall //A firewall is a network security device or software designed to monitor and control incoming and outgoing network traffic based on predetermined security rules. 
+firewall-cmd --list-all // To show default zones detail.
+firewall-cmd --add-service=<ssh/http> // To add service active zone temporiry.
+firewall-cmd --add-service=<ssh/http> // To add sevice active zone permanent.
+#After that reload is required to changes.
+firewall-cmd --complete-reload //To reload agter permanent add the service.
+firewall-cmd --add-port=<22/80> --permanent // To add port in active zone permanent. 
+firewall-cmd --remove-service=<ssh/http> // To remove service from active zone.
+firewall-cmd --remove-service=<ssh/http> --permanent //To remove service from active zone permanent.
