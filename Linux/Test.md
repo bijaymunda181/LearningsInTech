@@ -142,3 +142,12 @@ firewall-cmd --complete-reload //To reload agter permanent add the service.
 firewall-cmd --add-port=<22/80> --permanent // To add port in active zone permanent. 
 firewall-cmd --remove-service=<ssh/http> // To remove service from active zone.
 firewall-cmd --remove-service=<ssh/http> --permanent //To remove service from active zone permanent.
+
+#selinux
+getenforce // Get the current mode os selinux.
+setenforce 1 //To enable the selinux mode temporary.
+setenforce 0 // To disable the selinux mode temporary.
+vim/etc/selinux/config // selinux configuration file.
+semanage fcontext -l // This command lists the file context rules managed by SELinux.
+ex:- semanage fcontext -l |grep httpd //
+semanage fcontext -a -t <dummy_file_context> "/var/www/html/video(/.*)?"// The command you are trying to use is for adding a new SELinux file context rule.
