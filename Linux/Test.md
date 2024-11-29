@@ -162,3 +162,6 @@ ex:- pidof java // To view the process id of java.
 #kill // To terminate the process.
 kill <process id> // To kill the process by pid.
 kill -9 <process id> // kill the process immediatiy.
+
+#pkill // kill the process by the process name.
+ex:- pkill java // To kill the process java.
