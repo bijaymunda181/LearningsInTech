@@ -151,3 +151,10 @@ vim/etc/selinux/config // selinux configuration file.
 semanage fcontext -l // This command lists the file context rules managed by SELinux.
 ex:- semanage fcontext -l |grep httpd //
 semanage fcontext -a -t <dummy_file_context> "/var/www/html/video(/.*)?"// The command you are trying to use is for adding a new SELinux file context rule.
+
+#ps // Show current users process.
+ps -ef // To show all users all permission.
+ps -u <user name> // Show particular user all process.
+ps -p <pid> // To view the process name.
+pidof <process name> //To view the process id by process name .
+ex:- pidof java // To view the process id of java.
