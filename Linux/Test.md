@@ -158,3 +158,7 @@ ps -u <user name> // Show particular user all process.
 ps -p <pid> // To view the process name.
 pidof <process name> //To view the process id by process name .
 ex:- pidof java // To view the process id of java.
+
+#kill // To terminate the process.
+kill <process id> // To kill the process by pid.
+kill -9 <process id> // kill the process immediatiy.
