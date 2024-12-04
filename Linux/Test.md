@@ -132,6 +132,7 @@ vim /etc/cron.allow // To allow the cron jobs for specified users.
 
 Note:- If boot file are remove or delete , except root user the users are deny to execute the cronjob.
 Note:- Whenever run any command first check normal user can execute the command or not if normal user can execute the command then cronjob seduled also apply.
+nmcli con add type team-slave ifname <device name1> master <connection name> // for first deviece.
 
 #firewall //A firewall is a network security device or software designed to monitor and control incoming and outgoing network traffic based on predetermined security rules. 
 firewall-cmd --list-all // To show default zones detail.
@@ -165,3 +166,25 @@ kill -9 <process id> // kill the process immediatiy.
 
 #pkill // kill the process by the process name.
 ex:- pkill java // To kill the process java.
+
+#Network Teaming Or Network Bonding
+network teaming or network bounding are technique are used in networking to combine multiple network interface into single logical interface.
+
+nmcli con add con-name <connection name> type team ifname <connection name> config '{"runner": {"name": activebackup"}}'
+nmcli con add con-name Team0 type team ifname Team0 config '{"runner": {"name": "activebackup"}}'
+
+nmcli con add type team-slave ifname <device name1> master <connection name> // for first deviece.
+ex:-nmcli con add type team-slave ifname ens33 master Team0 // 
+
+nmcli con add type team-slave ifname <device name2> master <connection name> // for second deviece.
+ex:-nmcli con add type team-slave ifname ens34 master Team0 //
+
+nmcli con modyfy <connectio name> ipv4.address <ip address> autoconnect yes ipv4.method manual.
+ex:-nmcli modify Team0 ipv4.address 10.0.0.5/24 autoconnect yes ipv4.method manual // To give ip address to the connection manualy.
+
+nmcli con up <connection name> //To up the connection.
+ex:-nmcli con up Teamo //To up the Team0 connection.
+
+teamdctl <connection name> stat // To check the status.
+teamdctl Teamo stat // To check the status.
+
