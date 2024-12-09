@@ -188,3 +188,25 @@ ex:-nmcli con up Teamo //To up the Team0 connection.
 teamdctl <connection name> stat // To check the status.
 teamdctl Teamo stat // To check the status.
 
+#RAID
+RAID (Redundant Array of Independent Disks) is a technology that combines multiple physical
+storage drives into a single logical unit to improve performance, provide redundancy, or both. RAID
+is commonly used in servers, workstations, and storage systems to ensure data integrity, availability,and scalability.
+
+#configuration of RAID5 
+Minimum 3 disk required for Raid5.
+
+mdadm --create /dev/<device name> --leve=5 --raid-devices=<number of disk usedfor RAID> <device name1> <device name2> <device name3>
+ex:- mdadm --create /dev/md5 --leve=5 --raid-devices=3 /dev/sdb1 /dev/sdb2 /dev/sdb3
+
+give filesystem to the device.
+mkfs.xfs < device name> 
+
+Mount the device by entering in /etc/fstab file.
+vim /etc/fstab
+entery:- <device name> <mount point> <filesystem type> defaults 0 0
+
+mdadm -D <device name> //TO check the status of the raid device.
+ex:- mdadm -D /dev/raid5 
+
+mdadm --manage --add <device name> <new disk> //TO add new disk to the RAID .
