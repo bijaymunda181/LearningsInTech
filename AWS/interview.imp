@@ -1,0 +1,39 @@
+1. Key Recovery
+2. S3 Cross Account Access
+3. Role and Policy association using IAM to user and service
+4. How many ways we can generate the IAM Policy
+5. How many ways we can connect VM
+6. How to extend disk/partition
+7. How to configure backup
+8. Your VM is not booting how to troubleshoot
+9. How 22 traff will come into your VM
+10. Difference between IGW AND NGW
+11. How your private VM will communicate with internet
+12. How to connect your S3 with VM privately
+13. What is the use case of EFS
+14. Your VM is not able to mount the EFS how to troubleshoot
+15. You are not able to SSH into VM how to fix
+16. How will you patch the servers
+17. How many servers are there in your environment
+18. How many linux and windows servers are there
+19. How many environment are there
+20. What is the use of Elastic IP
+21. What is WAF
+22. What is LB and how to setup
+22. what is the difference between ALB and NLB
+23. What is ASG and how to setup
+24. What is the use case of SSM
+25. What is ACM
+26. What is SSL Certificate.
+27. How to renew the SSL Certificate
+28. Suppose if two servers are supporting one application how will you patch those servers without down the application
+29. What is 3/3 Checks on VM
+30. Difference between SG nd NACL and what is the usecase
+31. What is Route Table and what is the use case
+32. For which purpose you are using S3
+33. How to host web application in S3
+34. What is the gateway endpoint
+35. What is cloudwatch
+36. How to setup alert using cloudwatch
+37. Which monitoring tool your are using
+38. Which metrics are you monitoring
