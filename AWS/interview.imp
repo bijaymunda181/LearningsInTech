@@ -37,3 +37,27 @@
 36. How to setup alert using cloudwatch
 37. Which monitoring tool your are using
 38. Which metrics are you monitoring
+1.	What is DHCP server
+2.	What is hybrid cloud
+3.	How do you handel P1
+4.	How DNS works
+5.	What is blue screen error
+6.	How do you log in from 1 laptop to 100 servers
+7.	How repository works in linux
+8.	How you can give the permission to added user as sudo user
+9.	How system manager works in aws
+10.	How linux update the Kernal
+11.	How linux patching works
+12.	What is on primises
+13.	How you can migrate on premises cloud to aws cloud
+14.	How many ways are there to take the access of Linux server except putty
+15.	- How to recover EC2 lost key
+16.	- How to provide cross account access. Suppose S3 is deployed in AC-1 and User from AC-2 wants to access it how it will do.
+17.	- How to provide cost effective S3 bucket
+18.	Difference between SG and NACL
+19.	How to update the Kernal ?
+20.	DISK , CPU , MEMORY utilization
+21.	How to update the Kernal
+22.	How to udate BIOS
+23.	What is BOOT Process
+24.	How to extand the Lvm
