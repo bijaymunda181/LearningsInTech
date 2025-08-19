@@ -2062,4 +2062,4 @@ $ModLoad imklog # Kernel logs
    journalctl -u systemd-journald
    Summary
    • With imjournal, rsyslog pulls logs directly from journald's journal files.
-   • This setup avoids the need for ForwardToSyslog and provides structured access to logs.git
+   • This setup avoids the need for ForwardToSyslog and provides structured access to logs.gitgit stat
