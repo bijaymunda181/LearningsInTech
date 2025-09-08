@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to My Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+    .container {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      color: #4a4aff;
+    }
+    p {
+      font-size: 18px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #4a4aff;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #3333cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hello Bijay 👋</h1>
+    <p>Welcome to your first custom HTML web page running on Apache HTTP server.</p>
+    <a href="#" class="btn">Explore More</a>
+  </div>
+</body>
+</html>
