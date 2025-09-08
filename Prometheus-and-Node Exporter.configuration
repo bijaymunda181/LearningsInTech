@@ -1,0 +1,142 @@
+Download Prometheus
+
+1. Find the latest version from Prometheus downloads
+. Example:
+
+cd /opt
+sudo curl -LO https://github.com/prometheus/prometheus/releases/download/v2.55.0/prometheus-2.55.0.linux-amd64.tar.gz
+
+2. Extract Files
+sudo tar -xvzf prometheus-2.55.0.linux-amd64.tar.gz
+sudo mv prometheus-2.55.0.linux-amd64 prometheus
+
+3. Create Prometheus User
+sudo useradd --no-create-home --shell /bin/false prometheus
+
+4. Move Binaries
+cd /opt/prometheus
+sudo mv prometheus /usr/local/bin/
+sudo mv promtool /usr/local/bin/
+
+5. Create Config & Data Directories
+sudo mkdir /etc/prometheus
+sudo mkdir /var/lib/prometheus
+sudo cp -r consoles /etc/prometheus
+sudo cp -r console_libraries /etc/prometheus
+sudo cp prometheus.yml /etc/prometheus/
+sudo chown -R prometheus:prometheus /etc/prometheus /var/lib/prometheus
+
+6. Create Prometheus Systemd Service
+sudo nano /etc/systemd/system/prometheus.service
+
+
+Paste:
+
+[Unit]
+Description=Prometheus Monitoring
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=prometheus
+Group=prometheus
+Type=simple
+ExecStart=/usr/local/bin/prometheus \
+  --config.file=/etc/prometheus/prometheus.yml \
+  --storage.tsdb.path=/var/lib/prometheus/ \
+  --web.listen-address=0.0.0.0:9090 \
+  --web.console.templates=/etc/prometheus/consoles \
+  --web.console.libraries=/etc/prometheus/console_libraries
+
+[Install]
+WantedBy=multi-user.target
+
+7. Start Prometheus
+sudo systemctl daemon-reload
+sudo systemctl enable prometheus
+sudo systemctl start prometheus
+sudo systemctl status prometheus
+
+8. Access Prometheus UI
+
+Open in browser:
+
+http://<your_server_ip>:9090
+
+#Setup Node Exporter
+
+1. Download Node Exporter
+
+Check latest release from Node Exporter releases
+. Example:
+
+cd /opt
+sudo curl -LO https://github.com/prometheus/node_exporter/releases/download/v1.8.2/node_exporter-1.8.2.linux-amd64.tar.gz
+
+2. Extract and Move
+sudo tar -xvzf node_exporter-1.8.2.linux-amd64.tar.gz
+sudo mv node_exporter-1.8.2.linux-amd64 node_exporter
+sudo mv node_exporter/node_exporter /usr/local/bin/
+
+3. Create Node Exporter User
+sudo useradd --no-create-home --shell /bin/false nodeusr
+
+4. Create Systemd Service
+sudo nano /etc/systemd/system/node_exporter.service
+
+
+Paste this:
+
+[Unit]
+Description=Node Exporter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=nodeusr
+Group=nodeusr
+Type=simple
+ExecStart=/usr/local/bin/node_exporter
+
+[Install]
+WantedBy=multi-user.target
+
+5. Start Node Exporter
+sudo systemctl daemon-reload
+sudo systemctl enable node_exporter
+sudo systemctl start node_exporter
+sudo systemctl status node_exporter
+
+
+By default, Node Exporter runs on port 9100.
+Check in browser:
+
+http://<your_server_ip>:9100/metrics
+
+6. Configure Prometheus to Scrape Node Exporter
+
+Edit Prometheus config:
+
+sudo vim /etc/prometheus/prometheus.yml
+
+
+# Add under scrape_configs:
+
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'node_exporters'
+    static_configs:
+      - targets:
+        - '192.168.100.165:9100'  # Server B
+        - '192.168.100.163:9100'
+rule_files:
+  - "/etc/prometheus/alert-rules.yml"
+
+
+7. Restart Prometheus
+sudo systemctl restart prometheus
+
+
+Now Prometheus collects system metrics from Node Exporter 🎉
