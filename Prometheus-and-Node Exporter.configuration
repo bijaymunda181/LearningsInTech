@@ -82,7 +82,7 @@ sudo mv node_exporter/node_exporter /usr/local/bin/
 sudo useradd --no-create-home --shell /bin/false nodeusr
 
 4. Create Systemd Service
-sudo nano /etc/systemd/system/node_exporter.service
+sudo vi /etc/systemd/system/node_exporter.service
 
 
 Paste this:
