@@ -19,6 +19,7 @@ sudo firewall-cmd --permanent --add-service=http
 sudo firewall-cmd --permanent --add-service=https
 sudo firewall-cmd --reload
 cp HTML-Web-Page-1.html /var/www/html/HTML-Web-Page-1.html
+systemctl restart httpd
 
 #🔹 Step 6: Test Apache
 
