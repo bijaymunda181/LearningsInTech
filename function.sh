@@ -1,6 +1,6 @@
 greeting() {
 echo Hellow, My name is Bijay
-I am from Jamshedpur
+echo I am from Jamshedpur
 }
 
 greeting
