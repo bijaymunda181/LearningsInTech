@@ -4,3 +4,5 @@ echo I am from Jamshedpur
 }
 
 greeting
+
+echo Function Exit status - $?
