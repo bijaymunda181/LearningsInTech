@@ -1,7 +1,7 @@
 greeting() {
 echo Hellow, My name is Bijay
 echo I am from Jamshedpur
-return
+return 10
 I comple my gradution from jamshedpur workers college
 }
 
