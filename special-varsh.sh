@@ -5,4 +5,6 @@ echo No of Arhuments - $#
 
 echo All Argument - $*
 
+echo Script Name - $0
+
 
