@@ -32,3 +32,7 @@ variable "movies_type" {
 output "movies_type_Hindi" {
   value = var.movies_type["Hindi"]
 }
+
+output "movie_type_South" {
+  value = var.movies_type["South"]
+}
