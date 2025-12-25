@@ -35,7 +35,7 @@ variable "movies_type" {
   }
 }
 
-output "movies_type_Hindi" {
+output "movies_type_Hindi_total" {
   value = var.movies_type["Hindi"]["Total"]
 }
 
