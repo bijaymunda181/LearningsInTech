@@ -24,6 +24,6 @@ variable "country_details" {
   }
 }
 
-output "country_detail" {
-  value = "states = ${var.country_details["India"]["states"]}"
+output "country_india_detail" {
+  value = "states = ${var.country_details["India"]["states"]} , capital = ${var.country_details["India"]["capital"]} , Tourist_place = ${var.country_details["India"]["tourist_place"]}"
 }
