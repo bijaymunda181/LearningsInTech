@@ -13,5 +13,5 @@ variable "moves" {
 }
 
 output "movies" {
-  value = var.moves
+  value = var.moves[0]
 }
