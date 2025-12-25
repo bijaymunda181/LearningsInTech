@@ -39,7 +39,7 @@ output "movies_type_Hindi_total" {
   value = var.movies_type["Hindi"]["Total"]
 }
 
-output "movie_type_South" {
-  value = var.movies_type["South"]
+output "movie_type_South_total" {
+  value = var.movies_type["South"]["Total"]
 }
 
