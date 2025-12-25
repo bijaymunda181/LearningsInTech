@@ -1,7 +1,7 @@
-variable "movies_type" {
+variable "movie" {
   default = "Hindi"
 }
 
-output "movies_type" {
-  value = var.movies_type
+output "movie" {
+  value = var.movie
 }
