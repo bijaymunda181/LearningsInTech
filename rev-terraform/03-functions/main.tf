@@ -24,15 +24,22 @@ output "movies_second" {
 # Map variable, map of map variable
 variable "movies_type" {
   default = {
-    Hindi = 2
-    South = 5
+    Hindi = {
+      Total = 100
+      Debt_language = 3
+    }
+    South = {
+      Total = 200
+      Debt_language = 5
+    }
   }
 }
 
 output "movies_type_Hindi" {
-  value = var.movies_type["Hindi"]
+  value = var.movies_type["Hindi"]["Total"]
 }
 
 output "movie_type_South" {
   value = var.movies_type["South"]
 }
+
