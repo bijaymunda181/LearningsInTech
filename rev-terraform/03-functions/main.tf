@@ -42,7 +42,13 @@ output "movies_type_Hindi_total" {
 output "movie_type_Hindi_Debt_Language" {
   value = var.movies_type["Hindi"]["Debt_language"]
 }
+
 output "movie_type_South_total" {
   value = var.movies_type["South"]["Total"]
 }
+
+output "movie_type_south_Debt_language" {
+  value = var.movies_type["South"].Debt_language
+}
+
 
