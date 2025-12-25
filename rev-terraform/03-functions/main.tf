@@ -29,6 +29,6 @@ variable "movies_type" {
   }
 }
 
-output "movies" {
-  value = var.movies_type
+output "movies_type_Hindi" {
+  value = var.movies_type["Hindi"]
 }
