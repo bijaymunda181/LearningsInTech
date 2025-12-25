@@ -52,3 +52,19 @@ output "movie_type_south_Debt_language" {
 }
 
 
+variable "movie_details" {
+  default = {
+    Hindi = {
+      Total = 500 # Number
+      Gener = "Action" # String
+      for_sale = true # Boolean
+    }
+  }
+}
+
+# A variable in combination of any other string then it need to be with in ${}
+
+output "movie_detail_Hindi" {
+  value = "Total = ${var.movie_details["Hindi"]["Total"]} , Gener = ${var.movie_details["Hindi"]["Gener"]} , Sale = ${var.movie_details["Hindi"]["for_sale"]}"
+}
+
