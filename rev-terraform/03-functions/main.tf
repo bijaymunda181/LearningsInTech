@@ -49,5 +49,6 @@ output "movie_type_South_total" {
 
 output "movie_type_south_Debt_language" {
   value = var.movies_type["South"]["Debt_language"]
+}
 
 
