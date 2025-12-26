@@ -10,6 +10,7 @@ resource "aws_instance""instance" {
   vpc_security_group_ids = ["sg-03df7f4a9485bc781"]
 
   tags = {
-    Name = ""
+    // Name = var.components[count.index] # Dont use this because when you add more variable in front of mongodb index will change.so it will destory the server and create new server as the index.
+  Name = element(var.components,count.index )
   }
 }
