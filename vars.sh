@@ -5,7 +5,7 @@ echo a is $a
 #special  variables
 # $0 - $N, $*, $#
 
-#substitution varibles
+#substitution variables
 ## command substitution
 DATE=$(date)
 echo today Date is $DATE
