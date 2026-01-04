@@ -1,0 +1,8 @@
+- hosts: localhost
+  become: yes
+  vars:
+    app_version: 3.0
+  tasks:
+    - name: Print Variable Version
+      ansible.builtin.debug:
+        msg: "Deploying version {{ app_version }}"
