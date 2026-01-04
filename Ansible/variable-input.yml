@@ -5,4 +5,4 @@
   tasks:
     - name: Print Variable Version
       ansible.builtin.debug:
-        msg: "Deploying version {{ app_version }}"
+        msg: app_version - {{ app_version }}
