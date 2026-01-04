@@ -1,7 +1,7 @@
 - hosts: localhost
   become: yes
   vars:
-    app_version: 3.0
+    app_version: 10.1
   tasks:
     - name: Print Variable Version
       ansible.builtin.debug:
