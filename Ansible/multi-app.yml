@@ -1,0 +1,9 @@
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: install nginx and crony
+      ansible.builtin.dnf:
+        name:
+          - nginx
+          - bind
+        state: installed
