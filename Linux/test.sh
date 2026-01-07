@@ -1,5 +1,5 @@
 #!/bin/bash
 set -x
 
-name="Bijay"
+name="Bijay munda"
 echo "Hello $name"
